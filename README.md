@@ -4,7 +4,9 @@ MySQL is used for transactional and structured data, while MongoDB is used for a
 
 The system reads sales data from an Excel file and migrates it into a normalized relational database.
 It also provides a REST API to manage products and logs deletions into MongoDB.
+
 ---
+
 ## Technologies
 
 - Node.js
@@ -34,7 +36,9 @@ It also provides a REST API to manage products and logs deletions into MongoDB.
 - Business Intelligence queries
 
 - Audit log stored in MongoDB when a product **is deleted**
+
 ---
+
 ## Installation
 
 ### Install dependencies:
@@ -68,13 +72,13 @@ The API will run on:
 http://168.119.183.3:3307
 API Endpoints
 
-POST /products → Create a product
+POST /products  Create a product
 
-GET /products → Get all products
+GET /products  Get all products
 
-PUT /products/:id → Update a product
+PUT /products/:id  Update a product
 
-DELETE /products/:id → Delete a product and store audit log in MongoDB
+DELETE /products/:id  Delete a product and store audit log in MongoDB
 
 Audit Log (MongoDB)
 
@@ -118,7 +122,9 @@ This project demonstrates
 A validation step checks if customers, suppliers, products and orders already exist before inserting them, ensuring idempotent behavior and avoiding duplicated master records.
 ### for use the migrated script you need to:
 - execute in console **node migrated.js**
+
 ---
+
 ## why on mongoDB audit logs (deletionLogs)...
 - MongoDB is used as a NoSQL for storage logs for audit purposes. The schema validation is applied using mongoose for data consistency.
 Documents embed the full state of the deleted entity, beacause logs are inmutable (no one can re-write a deletion log) and in this way optimized for read operations. 
