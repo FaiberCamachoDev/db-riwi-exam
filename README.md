@@ -1,7 +1,6 @@
 # Megastore Database Project
 This project implements a hybrid database system using MySQL and MongoDB.
 MySQL is used for transactional and structured data, while MongoDB is used for audit logs when records are deleted.
-
 The system reads sales data from an Excel file and migrates it into a normalized relational database.
 It also provides a REST API to manage products and logs deletions into MongoDB.
 ---
