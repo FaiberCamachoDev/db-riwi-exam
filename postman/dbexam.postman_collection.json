@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "844bd19a-b9b9-44f5-9ae1-574a7b0dacb4",
+		"name": "dbexam",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "52675095",
+		"_collection_link": "https://faibercamacho16-9380159.postman.co/workspace/Faiber-Camacho's-Workspace~005441a8-7a7c-4b22-8fba-093ad8414793/collection/52675095-844bd19a-b9b9-44f5-9ae1-574a7b0dacb4?action=share&source=collection_link&creator=52675095"
+	},
+	"item": [
+		{
+			"name": "dbexam",
+			"item": [
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"sku\": \"TV-LG-001\",\n  \"name\": \"LG TV 50\",\n  \"category\": \"Electronics\",\n  \"unit_price\": 3500,\n  \"supplier_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3307/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3307",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3307/products/idhere",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3307",
+							"path": [
+								"products",
+								"idhere"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"sku\": \"TV-LG-001\",\n  \"name\": \"LG TV 50\",\n  \"category\": \"Electronics\",\n  \"unit_price\": 3500,\n  \"supplier_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3307/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3307",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"LG TV 50\",\n  \"category\": \"Electronics\",\n  \"unit_price\": 3500,\n  \"supplier_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3307/products/idhere",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3307",
+							"path": [
+								"products",
+								"idhere"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
